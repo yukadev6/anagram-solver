@@ -17,8 +17,14 @@ def anagram_maker(str1, str2):
 	common_keys = len(set1.intersection(keys2))
 
 	if common_keys == 0:
-		return (count1 + count2)
+		print("number of letters to create anagrams:", count1 + count2)
+		print("word 1 anagram:", str1 + str2)
+		print("word 2 anagram:", str2 + str1)
+	elif common_keys == count1 and common_keys == count2:
+		print("The two words are already anagrams!")
 	else:
-		return (abs(count1 - count2))
+		print("number of letters to create anagrams:", ((count1 + count2) - (common_keys*2)))
+		print("Try adding the missing letters to each word to create anagrams!")
 
-print(anagram_maker(str1, str2))
+
+anagram_maker(str1, str2)
