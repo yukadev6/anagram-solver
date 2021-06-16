@@ -10,11 +10,11 @@ def anagram_maker(str1, str2):
 	keys1 = dict1.keys()
 	keys2 = dict2.keys()
 
-	count1 = len(str1)
-	count2 = len(str2)
-
 	set1 = set(keys1)
 	common_keys = len(set1.intersection(keys2))
+
+	count1 = len(str1)
+	count2 = len(str2)
 
 	if common_keys == 0:
 		print("number of letters to create anagrams:", count1 + count2)
